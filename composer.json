@@ -12,6 +12,8 @@
     "require": {
         "setasign/fpdi-fpdf": "^2.3",
         "fpdf/fpdf": "dev-master",
-        "dompdf/dompdf": "dev-master"
+        "dompdf/dompdf": "dev-master",
+        "setasign/fpdi-tcpdf": "^2.3",
+        "dieffetech/watermark-fpdf": "*"
     }
 }

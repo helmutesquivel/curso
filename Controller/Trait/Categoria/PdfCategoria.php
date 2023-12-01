@@ -1,10 +1,7 @@
 <?php
-namespace Controller;
-//use Model\CursoModel;
-//require('vendor/setasign/fpdf/fpdf.php');
+namespace Controller\Trait\Categoria;
 require 'vendor/autoload.php'; //Composer
 use FPDF;
-
 class PDF extends FPDF
 {
 // Page header
@@ -17,16 +14,10 @@ function Header()
     // Move to the right
     $this->Cell(80);
     // Title
-    $this->Cell(70,10,utf8_decode('Reporte de Cursos'),1,0,'C', 0);
+    $this->Cell(70,10,utf8_decode('Categoria'),1,0,'C');
     // Line break
     $this->Ln(20);
-    $this->Cell(50,10,utf8_decode('ID'),1,0,'C', 0);
-    $this->Cell(50,10,utf8_decode('Nombres'),1,0,'C',0);
-    $this->Cell(50,10,utf8_decode('Curso Asignado'),1,1,'C',0);
-
-
-
-}
+    }
 
 // Page footer
 function Footer()
@@ -40,7 +31,7 @@ function Footer()
 }
 }
 
-class PdfController{
+trait PdfCategoria{
     
     public function generate(){
         $pdf = new PDF();
@@ -50,6 +41,7 @@ class PdfController{
 
         //Llamar a un controlador y obtener datos de la BD
         // Usuarios -> Obtengo listado
+       /*
         $estudiante = new InscripcionController();
         $inscripciones = $estudiante->mostrar();
         foreach($inscripciones as $inscripcion){
@@ -57,7 +49,7 @@ class PdfController{
                 $pdf->cell(50,10, $inscripcion["nombres"], 1, 0, 'C', 0);
                 $pdf->cell(50,10,$inscripcion["curso"],1, 1, 'C', 0);
         } 
-
+*/
         ob_end_clean();
         $pdf->Output();
        

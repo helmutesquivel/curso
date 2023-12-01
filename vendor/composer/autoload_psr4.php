@@ -14,4 +14,5 @@ return array(
     'FontLib\\' => array($vendorDir . '/phenx/php-font-lib/src/FontLib'),
     'Feeh\\Cursos\\' => array($baseDir . '/src'),
     'Dompdf\\' => array($vendorDir . '/dompdf/dompdf/src'),
+    'Dieffetech\\WatermarkFpdf\\' => array($vendorDir . '/dieffetech/watermark-fpdf/src'),
 );

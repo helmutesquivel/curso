@@ -6,23 +6,24 @@ class EnlacesModel{
 
     public static function enlacesPagina($enlace){
         $modulo = match($enlace){
-            "inicio" => "View/inicio.php",
-            "contacto" => "View/contacto.php",
-            "nosotros" => "View/nosotros.php",
-            "inscripcion" => "View/inscripcion.php",
-            "verinscripcion" => "View/mostrarinscripcion.php",
-            "editarInscripcion" => "View/editarInscripcion.php",
-            "eliminarInscripcion" => "View/eliminarInscripcion.php",
-            "login" => "View/login.php",
-            "logout" => "View/logout.php",
-            "inscripcioncategoria" => "View/inscripcioncategoria.php",
-            "crearUsuarioEstudiante" => "View/nuevoUsuario.php",
-            "grafica" => "View/grafica.php",
-            "pdf" => "View/pdf.php",
-            "mostrarTablas" => "View/mostrarTablas.php",
-            "recibirCursoAjax" => "View/recibirCursoAjax.php",
-            "enviarCursoAjax" => "View/enviarCursoAjax.php",
-            default => "View/error.php"
+            "inicio" => "View/pages/inicio.php",
+            "contacto" => "View/pages/contacto.php",
+            "nosotros" => "View/pages/nosotros.php",
+            "inscripcion" => "View/inscripcion/inscripcion.php",
+            "verinscripcion" => "View/inscripcion/mostrarinscripcion.php",
+            "editarInscripcion" => "View/inscripcion/editarInscripcion.php",
+            "eliminarInscripcion" => "View/inscripcion/eliminarInscripcion.php",
+            "login" => "View/users/login.php",
+            "logout" => "View/users/logout.php",
+            "inscripcioncategoria" => "View/inscripcion/categoria.php",
+            "crearUsuarioEstudiante" => "View/users/nuevoUsuario.php",
+            "grafica" => "View/extras/grafica.php",
+            "pdf" => "View/extras/pdf.php",
+            "mostrarTablas" => "View/extras/mostrarTablas.php",
+            "pdfCategoria" => "View/Categorias/PdfCategorias.php",
+            "recibirCursoAjax" => "View/cursos/recibirCursoAjax.php",
+            "enviarCursoAjax" => "View/cursos/enviarCursoAjax.php",
+            default => "View/pages/error.php"
         };
         return $modulo;
     }

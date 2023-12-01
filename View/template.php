@@ -37,7 +37,7 @@ use Controller\PaginaController;
 </head>
 <body>
 
-    <?php require_once("navbar.php"); ?>
+    <?php require_once("View/pages/navbar.php"); ?>
 
     <div class="container">
         <?php

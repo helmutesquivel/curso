@@ -3,6 +3,7 @@
 namespace Controller;
 use Model\InscripcionModel;
 
+
 class InscripcionController{
 
     public function inscribir(){
