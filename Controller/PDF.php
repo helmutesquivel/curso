@@ -1,11 +1,11 @@
 <?php
 namespace Controller;
-
 require 'vendor/autoload.php'; //Composer
 use FPDF;
 
 class PDF extends FPDF
 {
+        public $title="";
 // Page header
 function Header()
     {
@@ -16,7 +16,7 @@ function Header()
         // Move to the right
         $this->Cell(80);
         // Title
-        $this->Cell(70,10,utf8_decode('Categorias'),1,0,'C');
+        $this->Cell(70,10,$this->title,1,0,'C');
         // Line break
         $this->Ln(20);
         

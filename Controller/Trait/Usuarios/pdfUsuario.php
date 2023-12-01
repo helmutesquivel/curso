@@ -1,19 +1,20 @@
-<?php
-namespace Controller\Trait\Categoria;
+<?php 
+
+namespace Controller\Trait\Usuarios;
 require 'vendor/autoload.php'; //Composer
-use FPDF;
+
 use Controller\PDF;// Heder u Footer
 
-trait PdfCategorias{ 
-    public function PdfCategorias(){
-        $categoriasAllDB = $this->mostrar();
+trait pdfUsuario{
+    public function PdfUsuarios(){
+        $usuarioAllDB = $this->listarUsuarios();
         $pdf = new PDF();
-        $pdf->title="categoria";
+        $pdf->title="Usuarios";
         $pdf->AliasNbPages();
         $pdf->AddPage();
         $pdf->SetFont('Times','',12);
-        foreach($categoriasAllDB as $categoria){
-            $pdf->cell(0.10,$categoria["id"]." ",$categoria["categoria"],0,1);
+        foreach($usuarioAllDB as $usuario){
+            $pdf->cell(0,10,$usuario["id"]." ".$usuario["nombres"],0,1);
         }
         /*
         for($i=1;$i<=40;$i++){
@@ -24,4 +25,5 @@ trait PdfCategorias{
     
     }
 }
+
 ?>

@@ -2,9 +2,11 @@
 
 namespace Controller;
 use Model\UsuarioModel;
+use Controller\trait\Usuarios\pdfUsuario;
+use Controller\trait\Usuarios\listPdfUsuario;
 
 class UsuarioController{
-
+    use pdfUsuario,listPdfUsuario;
     public function login(){
         $token = filter_input(INPUT_POST, 'token', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
@@ -63,11 +65,6 @@ class UsuarioController{
             return $respuesta;
         }
     }
-
-    public function saluda(){
-        return "hola";
-    }
-
 }
 
 ?>
